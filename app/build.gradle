@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.alexcrafford.trivachallenge"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_BASE_URL", '"https://opentdb.com/"')
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+ext {
+    autoValueVersion = "1.4.1"
+    autoValueGsonVersion = "0.4.6"
+    autoValueParcelVersion = "0.2.5"
+    retrofitAdapterVersion = "1.0.0"
+    retrofit2Version = "2.2.0"
+    simpleStackVersion = "1.6.1"
+    rxAndroidVersion = "2.0.1"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit2Version}"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitAdapterVersion}"
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+
+    // Butterknife
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+
+    // AutoValue
+    compileOnly "com.google.auto.value:auto-value:${autoValueVersion}"
+    annotationProcessor "com.google.auto.value:auto-value:${autoValueVersion}"
+    annotationProcessor 'com.ryanharter.auto.value:auto-value-parcel:' + autoValueParcelVersion
+    implementation 'com.ryanharter.auto.value:auto-value-parcel-adapter:' + autoValueParcelVersion
+    annotationProcessor 'com.ryanharter.auto.value:auto-value-gson:' + autoValueGsonVersion
+    compileOnly 'com.ryanharter.auto.value:auto-value-gson:' + autoValueGsonVersion
+    implementation 'com.google.code.gson:gson:' + gsonVersion
+
+    // Back stack
+    implementation "com.github.Zhuinden:simple-stack:${simpleStackVersion}"
+}
+

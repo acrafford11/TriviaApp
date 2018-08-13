@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_top_margin">10dp</dimen>
+    <dimen name="button_text_size">15sp</dimen>
+    <dimen name="next_button_text_size">20sp</dimen>
+    <dimen name="next_button_top_margin">35dp</dimen>
+    <dimen name="question_text_size">25sp</dimen>
+    <dimen name="question_top_margin">10dp</dimen>
+    <dimen name="min_height">32dp</dimen>
+    <dimen name="question_container_margin">20dp</dimen>
+</resources>

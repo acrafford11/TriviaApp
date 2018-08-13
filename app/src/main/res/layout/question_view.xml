@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.alexcrafford.trivachallenge.ui.question.View xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewAnimator
+        android:id="@+id/viewanimator_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_question_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/question_container_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_question"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/question_top_margin"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight=".30"
+                android:textSize="@dimen/question_text_size"
+                android:minHeight="@dimen/min_height"/>
+
+            <Button
+                android:id="@+id/button_answer1"
+                android:text="@string/button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_button"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:textSize="@dimen/button_text_size"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/button_answer2"
+                android:text="@string/button_2"
+                android:background="@drawable/default_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:textSize="@dimen/button_text_size"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/button_answer3"
+                android:text="@string/button_3"
+                android:background="@drawable/default_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:textSize="@dimen/button_text_size"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/button_answer4"
+                android:text="@string/button_4"
+                android:background="@drawable/default_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:textSize="@dimen/button_text_size"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/next_question"
+                android:text="@string/next_question"
+                android:background="@drawable/default_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/next_button_top_margin"
+                android:textSize="@dimen/next_button_text_size"
+                android:layout_weight=".30"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/empty_view"/>
+
+        <include layout="@layout/error_view"/>
+
+        <include layout="@layout/loading_view"/>
+
+    </ViewAnimator>
+</com.example.alexcrafford.trivachallenge.ui.question.View>

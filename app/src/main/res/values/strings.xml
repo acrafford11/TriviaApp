@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TrivaChallenge</string>
+    <string name="button_2">BUTTON 2</string>
+    <string name="button_1">BUTTON 1</string>
+    <string name="button_3">BUTTON 3</string>
+    <string name="button_4">BUTTON 4</string>
+    <string name="next_question">Next Question!</string>
+    <string name="no_questions">No Questions</string>
+</resources>
